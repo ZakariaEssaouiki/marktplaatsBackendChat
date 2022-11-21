@@ -41,4 +41,6 @@ public class BerichtService implements IBericht{
     public Bericht FindById(int id) {
         return this.berichtRepo.findById(id).orElse(null);
     }
+
+    //test
 }
