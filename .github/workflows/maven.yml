@@ -55,7 +55,7 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.TOKEN_GITHUB }}  # Needed to get PR information, if any
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
       run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=ZakariaEssaouiki_marktplaatsBackendChat
-    
+
     - uses: mr-smithers-excellent/docker-build-push@v5
       with:
         image: afedjah/marktplaatsrepo
