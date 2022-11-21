@@ -38,7 +38,7 @@ public class BerichtService implements IBericht{
     }
 
     @Override
-    public Bericht FindById(int id) {
+    public Bericht FindById(String id) {
         return this.berichtRepo.findById(id).orElse(null);
     }
 

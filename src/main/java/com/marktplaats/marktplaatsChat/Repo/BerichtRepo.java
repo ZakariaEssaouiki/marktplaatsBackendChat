@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface BerichtRepo extends MongoRepository<Bericht,Integer> {
+public interface BerichtRepo extends MongoRepository<Bericht,String> {
 
     List<Bericht> findBerichtsByVerzenderIdAndAndOntvangerId(String verzenderId, String ontvangerId);
 }

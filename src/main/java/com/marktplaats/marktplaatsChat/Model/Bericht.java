@@ -2,6 +2,7 @@ package com.marktplaats.marktplaatsChat.Model;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.mapping.Field;
 
 import java.time.LocalDate;
 
@@ -9,18 +10,20 @@ import java.time.LocalDate;
 public class Bericht {
 
     @Id
-    private int id;
+    private String id;
+    @Field("sequence_number")
+    int sequence;
     private String verzenderId;
     private String ontvangerId;
     private String text;
     private LocalDate datum;
 
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -45,7 +48,7 @@ public class Bericht {
     }
 
     public void setDatum(LocalDate datum) {
-        datum = datum;
+        this.datum = datum;
     }
 
     public String getText() {
